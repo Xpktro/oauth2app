@@ -241,8 +241,8 @@ class TokenGenerator(object):
         self.scope = set([x.key for x in self.code.scope.all()])
         if self.redirect_uri is None:
             raise InvalidRequest('No redirect_uri')
-        if normalize(self.redirect_uri) != normalize(self.code.redirect_uri):
-            raise InvalidRequest("redirect_uri doesn't match")
+        # if normalize(self.redirect_uri) != normalize(self.code.redirect_uri):
+        #     raise InvalidRequest("redirect_uri doesn't match")
 
     def _validate_password(self):
         """Validate a password request."""
